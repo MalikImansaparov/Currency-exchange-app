@@ -1,0 +1,34 @@
+.block{
+    position: relative;
+    padding: 20px 15px 20px 20px;
+    border: 1px solid #747474;
+    border-top: 1px solid #487922;
+    background: #ededed;
+    margin: 20px;
+}
+.block div{
+    margin-bottom: 20px;
+}
+.block .currency-in .block .currency-out{
+    font-size: 1.3rem;
+    text-align: right;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-start;
+}
+.flex-item{
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+}
+.currency-name{
+    font-family: Oswald;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
