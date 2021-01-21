@@ -41,7 +41,7 @@ $ npm install
 
 $ npm start
 ```
-## Thanks
+Thanks
 
 
 
