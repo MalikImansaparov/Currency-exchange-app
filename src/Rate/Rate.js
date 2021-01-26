@@ -9,7 +9,7 @@ class Rate extends React.Component {
             'date': ' ',
             'currencyRate': {}
         }
-        this.currency = ['USD', 'RUB', 'CAD', 'PHP'];
+        this.currency = ['USD', 'RUB', 'CAD', 'PHP']; //choose which currency us showing
         this.getRate();
     }
     getRate = () => {
@@ -21,11 +21,11 @@ class Rate extends React.Component {
                 console.log(data);
             this.setState({date : data.date});
                 let result = { };
-                for( let i=0; i <this.currency.length; i++){
+                for( let i=0; i <this.currency.length; i++){    // Recieve necessary currency
                     result[this.currency[i]] = data.rates[this.currency[i]]
                 }
                 console.log(result)
-                this.setState({currencyRate : result})
+                this.setState({currencyRate : result}) // Insert in state
     });
     }
     render(){
@@ -33,11 +33,11 @@ class Rate extends React.Component {
                 <div className='rate'>
                     <h3>Курс валют на {this.state.date}</h3>
                     <div className='flex-container'>
-                        {Object.keys(this.state.currencyRate).map((keyName, i) =>
+                        {Object.keys(this.state.currencyRate).map((keyName, i) => // Recieve keys and  on them map
                             (
                                 <div className='block flex-item' key={keyName}>
                                     <div className='currency-name'>{keyName}</div>
-                                    <div className='currency-in'>{this.state.currencyRate[keyName].toFixed(2)}</div>
+                                    <div className='currency-in'>{this.state.currencyRate[keyName].toFixed(2)}</div> //showing rate even if there is more than a sign after the commas, so as not to interfere
                                     <p> * можно купить за 1 EUR</p>
                                 </div>
                             )
