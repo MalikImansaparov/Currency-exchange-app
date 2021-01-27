@@ -21,11 +21,11 @@ class Rate extends React.Component {
                 console.log(data);
             this.setState({date : data.date});
                 let result = { };
-                for( let i=0; i <this.currency.length; i++){    // Recieve necessary currency
+                for( let i=0; i <this.currency.length; i++){    // got necessary currency
                     result[this.currency[i]] = data.rates[this.currency[i]]
                 }
                 console.log(result)
-                this.setState({currencyRate : result}) // Insert in state
+                this.setState({currencyRate : result}) // insert in state
     });
     }
     render(){
@@ -33,7 +33,7 @@ class Rate extends React.Component {
                 <div className='rate'>
                     <h3>Курс валют на {this.state.date}</h3>
                     <div className='flex-container'>
-                        {Object.keys(this.state.currencyRate).map((keyName, i) => // Recieve keys and  on them map
+                        {Object.keys(this.state.currencyRate).map((keyName, i) => // got keys and  on them map
                             (
                                 <div className='block flex-item' key={keyName}>
                                     <div className='currency-name'>{keyName}</div>

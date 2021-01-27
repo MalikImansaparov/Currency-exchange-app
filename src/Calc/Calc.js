@@ -10,13 +10,14 @@ class Calc extends React.Component {
     }
     static getDerivedStateFromProps(props, state){
         return {rate: props.rate}
-    }
+    } // props tuck in State
     calcRate = (e) => {
         e.preventDefault();
-        let elements = e.target.elements;
+        let elements = e.target.elements; // got forms
         let  countCurrency = elements['count-currency'].value;
         let typeCurrency = elements['type-currency'].value;
-        this.setState({result: (countCurrency / this.state.rate[typeCurrency])})
+        this.setState({result: (countCurrency / this.state.rate[typeCurrency])}) // divide the transmitted value by
+        // the currency rate
     }
     render(){
         return (
