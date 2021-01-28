@@ -33,14 +33,14 @@ class Rate extends React.Component {
                 <div className='rate'>
                     <h3>Курс валют на {this.state.date}</h3>
                     <div className='flex-container'>
-                        {Object.keys(this.state.currencyRate).map((keyName, i) => // got keys and  on them map
+                        {Object.keys(this.state.currencyRate).map((keyName, i) => // got keys and  on them go over
                             (
                                 <div className='block flex-item' key={keyName}>
                                     <div className='currency-name'>{keyName}</div>
-                                    <div className='currency-in'>{this.state.currencyRate[keyName].toFixed(2)}</div> //showing rate even if there is more than a sign after the commas, so as not to interfere
+                                    <div className='currency-in'>{this.state.currencyRate[keyName].toFixed(2)}</div>
                                     <p> * можно купить за 1 EUR</p>
                                 </div>
-                            )
+                            ) //showing rate even if there is more than a sign after the commas, so as not to interfere
                         )}
                             </div>
                     <Calc rate={this.state.currencyRate}/>

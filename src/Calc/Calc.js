@@ -10,7 +10,7 @@ class Calc extends React.Component {
     }
     static getDerivedStateFromProps(props, state){
         return {rate: props.rate}
-    } // props tuck in State
+    } // props tuck in state
     calcRate = (e) => {
         e.preventDefault();
         let elements = e.target.elements; // got forms
@@ -29,7 +29,7 @@ class Calc extends React.Component {
                         <form onSubmit={this.calcRate}>
                         <input type='number' defaultValue='150' name='count-currency'/>
                         <select name='type-currency'>
-                            {Object.keys(this.props.rate).map((keyName, i) => // got keys and  on them map
+                            {Object.keys(this.props.rate).map((keyName, i) => // got keys and  on them go over
                                 (
                                   <option key={keyName} defaultValue={keyName}>
                                       {keyName}
