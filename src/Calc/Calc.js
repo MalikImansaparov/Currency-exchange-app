@@ -14,8 +14,8 @@ class Calc extends React.Component {
     calcRate = (e) => {
         e.preventDefault();
         let elements = e.target.elements; // got forms
-        let  countCurrency = elements['count-currency'].value;
-        let typeCurrency = elements['type-currency'].value;
+        let  countCurrency = elements['count-currency'].value; // eject value(150) in class 'count-currency'
+        let typeCurrency = elements['type-currency'].value; // eject value(USD) in class 'type-currency'
         this.setState({result: (countCurrency / this.state.rate[typeCurrency])}) // divide the transmitted value by
         // the currency rate
     }
@@ -28,10 +28,10 @@ class Calc extends React.Component {
                     <div>
                         <form onSubmit={this.calcRate}>
                         <input type='number' defaultValue='150' name='count-currency'/>
-                        <select name='type-currency' id=''>
-                            {Object.keys(this.props.rate).map((keyName, i) =>
+                        <select name='type-currency'>
+                            {Object.keys(this.props.rate).map((keyName, i) => // got keys and  on them map
                                 (
-                                  <option key={keyName } defaultValue={keyName}>
+                                  <option key={keyName} defaultValue={keyName}>
                                       {keyName}
                                   </option>
 
