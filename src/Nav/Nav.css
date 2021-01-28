@@ -1,5 +1,5 @@
 .header-nav{
-    background: #3b621c;
+    background: #1c56e7;
 }
 .header-nav li{
     display: inline-block;
@@ -11,5 +11,5 @@
     display:block;
 }
 .header-nav li:hover{
-    background: #487922;
+    background: #1750dd;
 }
