@@ -26,7 +26,7 @@ class App extends React.Component {
       <div className='site-content'>
         <div className='well'>
           На нашем сайте мы используем cookie для сбора информации технического характера. <br/>
-          В часности, для персонифисированной работы сайта мы обрабатываем IP-адрес региона вашего местоположенияю
+          В часности, для персонифисированной работы сайта мы обрабатываем ip-адрес региона вашего местоположенияю
           &nbsp;<button className='btn btn-primary btn-sm'>ok</button>
         </div>
       </div>

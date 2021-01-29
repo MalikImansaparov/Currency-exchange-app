@@ -33,7 +33,7 @@ class Rate extends React.Component {
                 <div className='rate'>
                     <h3>Курс валют на {this.state.date}</h3>
                     <div className='flex-container'>
-                        {Object.keys(this.state.currencyRate).map((keyName, i) => // got keys and  on them go over
+                        {Object.keys(this.state.currencyRate).map((keyName, i) => // got keys and  on them go overco
                             (
                                 <div className='block flex-item' key={keyName}>
                                     <div className='currency-name'>{keyName}</div>
