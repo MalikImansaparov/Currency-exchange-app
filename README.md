@@ -1,4 +1,4 @@
-A simple currency app built using the [Fixer.io](http://fixer.io/) API.
+A simple currency app built using the Exchange API.
 
 
 
